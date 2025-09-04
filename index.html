@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tae Min Kim — Portfolio</title>
+  <meta name="description" content="Portfolio and resume of Tae Min Kim: robotics, reinforcement learning, and control projects." />
+  <meta property="og:title" content="Tae Min Kim — Portfolio" />
+  <meta property="og:description" content="Robotics & RL projects, publications, and resume." />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #101631;
+      --text: #e8edf7;
+      --muted: #a9b2c7;
+      --accent: #7aa2ff;
+      --accent-2: #a3ffd6;
+      --border: #1f2a55;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f9fc; --card:#ffffff; --text:#0b1020; --muted:#5a678a; --accent:#335cff; --accent-2:#0bb; --border:#e5e9f5;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:8px;margin-bottom:24px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:50%;border:2px solid var(--border);background:linear-gradient(135deg,var(--accent),var(--accent-2));}
+    nav a{margin-left:16px;font-weight:600}
+    .hero{padding:32px;border:1px solid var(--border);background:linear-gradient(180deg, color-mix(in oklab, var(--card), transparent 10%) 0%, var(--card) 100%);border-radius:20px}
+    .hero h1{font-size:clamp(28px,5vw,40px);margin:0 0 8px 0}
+    .hero p{margin:0;color:var(--muted)}
+    .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--card);color:var(--text);padding:10px 14px;border-radius:14px;font-weight:600}
+    .btn.primary{background:var(--accent);color:#fff;border-color:transparent}
+    section{margin-top:28px}
+    h2{font-size:22px;margin:0 0 12px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+    .thumb{aspect-ratio:16/9;background:#0a0f2a;display:grid;place-items:center;color:var(--muted);font-size:14px}
+    .card-body{padding:14px}
+    .chip{display:inline-block;font-size:12px;border:1px solid var(--border);padding:4px 8px;border-radius:999px;color:var(--muted)}
+    footer{margin:40px 0 8px;color:var(--muted);text-align:center}
+    .list{display:grid;gap:10px}
+    .item{display:flex;justify-content:space-between;gap:12px;border:1px solid var(--border);background:var(--card);border-radius:12px;padding:10px}
+    .right{color:var(--muted)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:800;font-size:18px">Tae Min Kim</div>
+          <div style="color:var(--muted)">Robotics • Reinforcement Learning • Control</div>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="about">
+        <h1>Hello! I build robots that learn.</h1>
+        <p>I’m a graduate student focusing on robust manipulation, SAC/PPO, and disturbance‑observer‑augmented RL. I enjoy taking ideas from simulation to real hardware.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn" href="#resume">View Resume</a>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <div class="grid">
+          <!-- Project Card 1 -->
+          <article class="card">
+            <div class="thumb">Image / GIF</div>
+            <div class="card-body">
+              <h3 style="margin:0 0 6px 0">DOB‑RL for Robust Manipulation</h3>
+              <p style="margin:0 0 10px 0;color:var(--muted)">Teacher–student distillation in IsaacLab; 5× improvement in blind grasp success vs. baseline RL. Transfer to Dynamixel‑based gripper.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+                <span class="chip">PyTorch</span>
+                <span class="chip">IsaacLab</span>
+                <span class="chip">SAC</span>
+              </div>
+              <div class="list">
+                <a href="https://github.com/your-username/dob-rl" class="item">
+                  <span>Source on GitHub</span>
+                  <span class="right">↗</span>
+                </a>
+                <a href="https://youtu.be/your-demo" class="item">
+                  <span>Demo Video</span>
+                  <span class="right">▶</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="card">
+            <div class="thumb">Image / GIF</div>
+            <div class="card-body">
+              <h3 style="margin:0 0 6px 0">SAC Agent for Pendulum / MuJoCo</h3>
+              <p style="margin:0 0 10px 0;color:var(--muted)">History‑windowed SAC with standardization across 15 steps; in‑place evaluation and logging.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+                <span class="chip">Gymnasium</span>
+                <span class="chip">MuJoCo</span>
+                <span class="chip">SAC</span>
+              </div>
+              <div class="list">
+                <a href="https://github.com/your-username/sac-agent" class="item">
+                  <span>Code & Docs</span>
+                  <span class="right">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="card">
+            <div class="thumb">Image / GIF</div>
+            <div class="card-body">
+              <h3 style="margin:0 0 6px 0">Drone Vibration Mitigation</h3>
+              <p style="margin:0 0 10px 0;color:var(--muted)">Optimized polyurethane foam placement; ~20% vibration reduction. Modeled designs in SolidWorks.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+                <span class="chip">SolidWorks</span>
+                <span class="chip">Vibration</span>
+              </div>
+              <div class="list">
+                <a href="https://github.com/your-username/drone-vibration" class="item">
+                  <span>Report</span>
+                  <span class="right">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="resume">
+        <h2>Resume</h2>
+        <div class="item" style="align-items:center">
+          <span>Download my latest resume (PDF).</span>
+          <a class="btn" href="resume.pdf" download>Download</a>
+        </div>
+        <ul style="margin-top:12px;color:var(--muted)">
+          <li>Place your <code>resume.pdf</code> in the repository root.</li>
+          <li>Update the link above if you keep versions like <code>resume_2025.pdf</code>.</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-body">
+              <p style="margin:0">
+                <strong>Email:</strong> <a href="mailto:tk3175@columbia.edu">tk3175@columbia.edu</a><br />
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tm-kim">linkedin.com/in/tm-kim</a><br />
+                <strong>GitHub:</strong> <a href="https://github.com/your-username">github.com/your-username</a>
+              </p>
+              <p style="margin:10px 0 0 0;color:var(--muted)">Tip: For a contact form without a backend, use Formspree or EmailJS and point a form’s <code>action</code> there.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="notes">
+        <h2>How to use this starter</h2>
+        <ol style="color:var(--muted)">
+          <li>Rename the GitHub repo to <strong>your-username.github.io</strong> (exact match) or turn on Pages in repo settings.</li>
+          <li>Drop <code>index.html</code> (this file) and <code>resume.pdf</code> into the repo root and commit.</li>
+          <li>Update <em>links</em> to your real GitHub/YouTube and project repos.</li>
+          <li>Replace the placeholder avatar with <code>avatar.jpg</code> by swapping the gradient in the <code>.avatar</code> class for <code>background-image:url('avatar.jpg')</code>.</li>
+          <li>Optional: connect a custom domain in Settings → Pages, and add DNS <code>CNAME</code> to <em>your-username.github.io</em>.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Tae Min Kim · Built with GitHub Pages
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
