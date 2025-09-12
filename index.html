@@ -58,36 +58,41 @@
       background: rgba(0,0,0,0.8);
       display: none; /* default hidden */
       align-items: center;
-      justify-content: center;
+      justify-content: center; /* center horizontally */
       z-index: 999;
     }
     
     .popup:target {
-      display: flex; /* only visible when targeted (#dob-popup in URL) */
+      display: flex; /* show popup when targeted */
     }
     
     .popup-content {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;   /* center the image inside */
+      justify-content: center;
     }
     
     .popup img {
-      max-width: 50%;
-      max-height: 60%;
+      max-width: 60%;   /* or 500px if you want fixed */
+      height: auto;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
     
     .popup-close {
       position: absolute;
-      top: -10px; right: -10px;
+      top: -15px;   /* slightly above the image */
+      right: -15px; /* slightly to the right of the image */
       background: #fff;
       color: #000;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: bold;
-      line-height: 24px;
-      width: 30px; height: 30px;
+      width: 28px; height: 28px;
       border-radius: 50%;
       text-align: center;
+      line-height: 28px;
       text-decoration: none;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
