@@ -31,7 +31,7 @@
     .container{max-width:1000px;margin:0 auto;padding:24px}
     header{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:8px;margin-bottom:24px}
     .brand{display:flex;gap:16px;align-items:center}
-    .avatar{width:56px;height:56px;border-radius:50%;border:2px solid var(--border);background:linear-gradient(135deg,var(--accent),var(--accent-2));}
+    .avatar {width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--border); object-fit: cover; /* ensures your face fills the circle neatly */}
     nav a{margin-left:16px;font-weight:600}
     .hero{padding:32px;border:1px solid var(--border);background:linear-gradient(180deg, color-mix(in oklab, var(--card), transparent 10%) 0%, var(--card) 100%);border-radius:20px}
     .hero h1{font-size:clamp(28px,5vw,40px);margin:0 0 8px 0}
@@ -57,7 +57,7 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="avatar" aria-hidden="true"></div>
+        <img src="tm.jpeg" alt="Tae Min Kim" class="avatar">
         <div>
           <div style="font-weight:800;font-size:18px">Tae Min Kim</div>
           <div style="color:var(--muted)">Robotics • Reinforcement Learning • Control</div>
