@@ -51,21 +51,22 @@
       flex-direction:column;
       height:100%;            /* ensures equal-height cards */
     }
-    .thumb{
-      aspect-ratio:16/9;      /* fixed box => body starts at same Y-position */
-      background:#0a0f2a;     /* backdrop for letterboxing */
-      display: flex;          /* simpler than grid */
+    .thumb {
+      aspect-ratio: 16/9;
+      background: #0a0f2a;
+      overflow: hidden;          /* crops overflow neatly */
+      display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;       /* crop overflow cleanly */
     }
     
-    /* Show the entire image (no cropping) inside the fixed box */
-    .thumb img{
-      width:100%;
-      height:100%;
-      object-fit:cover;     /* <-- key change: no cropping */
-      display:block;
+    .thumb img {
+      max-width: 100%;           /* shrink correctly */
+      max-height: 100%;
+      width: auto;               /* let browser decide */
+      height: auto;
+      object-fit: cover;         /* fill box, keep ratio */
+      display: block;
     }
     .card-body{
       padding:14px;
