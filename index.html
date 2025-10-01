@@ -54,18 +54,17 @@
     .thumb{
       aspect-ratio:16/9;      /* fixed box => body starts at same Y-position */
       background:#0a0f2a;     /* backdrop for letterboxing */
-      display:grid;
-      place-items:center;
-      color:var(--muted);
-      font-size:14px;
-      /* overflow:hidden;  <-- optional: can keep or remove; not needed for contain */
+      display: flex;          /* simpler than grid */
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;       /* crop overflow cleanly */
     }
     
     /* Show the entire image (no cropping) inside the fixed box */
     .thumb img{
       width:100%;
       height:100%;
-      object-fit:contain;     /* <-- key change: no cropping */
+      object-fit:cover;     /* <-- key change: no cropping */
       display:block;
     }
     .card-body{
