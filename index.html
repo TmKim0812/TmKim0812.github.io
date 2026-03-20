@@ -147,11 +147,12 @@
                     </div>
                     <div class="card-content">
                         <h3>Dexterous In-Hand Manipulation</h3>
-                        <p>Teacher–student distillation in IsaacLab; Transfer to Dynamixel‑based gripper.</p>
+                        <p>Built a sim-to-real dexterous manipulation pipeline in IsaacLab using teacher–student distillation with an adjusted Transformer decoder. Achieved 5× better blind-grasping performance over RL-only baselines and transferred the policy to a Dynamixel-based gripper via ROS2, retaining 90% of simulation performance on real hardware.</p>
                         <div class="tech-tags">
                             <span class="tag">IsaacLab</span>
                             <span class="tag">PyTorch</span>
                             <span class="tag">RL</span>
+                            <span class="tag">Imitation Learning</span>
                             <span class="tag">Sim-to-Real</span>
                         </div>
                         <div class="links">
@@ -169,7 +170,7 @@
                     </div>
                     <div class="card-content">
                         <h3>DOB‑RL for Robust Manipulation</h3>
-                        <p>RL deployment with DOB feedback; Neural network–constructed observer.</p>
+                        <p>Improved real-robot manipulation performance by 10% by augmenting a deployed RL policy with a neural network-based disturbance observer. The observer provides real-time feedback to compensate for modeling mismatch and external disturbances during deployment.</p>
                         <div class="tech-tags">
                             <span class="tag">PyTorch</span>
                             <span class="tag">Robust Control</span>
@@ -191,11 +192,9 @@
                     </div>
                     <div class="card-content">
                         <h3>Robust Walking Robot</h3>
-                        <p>Trained on Genesis & Isaac Sim simulator; achieved stable gait motion; transferred to
-                            physical hardware.</p>
+                        <p>Directed full-stack development of a bipedal walking robot from mechanical design in OnShape to embedded control on Raspberry Pi 4 with 8 servo motors. Trained a PPO-based gait policy in Genesis simulation and successfully deployed it to physical hardware.</p>
                         <div class="tech-tags">
                             <span class="tag">Genesis</span>
-                            <span class="tag">Isaac Sim</span>
                             <span class="tag">RL</span>
                             <span class="tag">Legged Locomotion</span>
                         </div>
@@ -218,9 +217,7 @@
                     </div>
                     <div class="card-content">
                         <h3>Imitation Learning with LeRobot</h3>
-                        <p>Building an imitation learning pipeline on an open-source robotic arm using a single
-                            camera. Training and comparing ACT (Action Chunking Transformer) and Diffusion
-                            Transformer policies for manipulation tasks.</p>
+                        <p>Building an imitation learning pipeline on an open-source robotic arm using a single camera and tactile sensors. Implementing and comparing ACT and Diffusion Transformer policies for pick-and-place tasks, with plans to expand to more complex manipulation behaviors.</p>
                         <div class="tech-tags">
                             <span class="tag">LeRobot</span>
                             <span class="tag">ACT</span>
